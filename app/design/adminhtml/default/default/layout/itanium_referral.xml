@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<layout version="0.1.0">
+    <adminhtml_customer_edit>
+        <reference name="customer_edit_tabs">
+            <block type="itanium_referral/adminhtml_customer_edit_tab_reward" name="customer_edit_tab_referral" template="itanium/referral/customer/reward.phtml">
+                <block type="itanium_referral/adminhtml_customer_edit_tab_reward_management" name="referral_management"/>
+            </block>
+            <action method="addTab"><name>customer_edit_tab_referral</name><block>customer_edit_tab_referral</block></action>
+        </reference>
+        <reference name="customer_edit_tab_view">
+            <block type="itanium_referral/adminhtml_customer_edit_tab_reward_management_balance" name="referral.points.balance" before="-"/>
+        </reference>
+    </adminhtml_customer_edit>
+
+    <adminhtml_referral_rate_index>
+        <reference name="content">
+            <block type="itanium_referral/adminhtml_referral_rate" name="referral.rate.container"/>
+        </reference>
+    </adminhtml_referral_rate_index>
+
+    <adminhtml_referral_rate_edit>
+        <reference name="content">
+            <block type="itanium_referral/adminhtml_referral_rate_edit" name="referral.rate.edit.container"/>
+        </reference>
+    </adminhtml_referral_rate_edit>
+
+    <adminhtml_referral_overview_index>
+        <reference name="content">
+            <block type="itanium_referral/adminhtml_referral_overview" name="referral.overview.container"/>
+        </reference>
+    </adminhtml_referral_overview_index>
+
+    <adminhtml_referral_overview_edit>
+        <reference name="content">
+            <block type="itanium_referral/adminhtml_referral_overview_edit" name="referral.overview.edit.container"/>
+        </reference>
+    </adminhtml_referral_overview_edit>
+
+    <adminhtml_referral_customer_index>
+        <reference name="content">
+            <block type="itanium_referral/adminhtml_referral_customer" name="referral.customer.container"/>
+        </reference>
+    </adminhtml_referral_customer_index>
+
+    <adminhtml_referral_customer_edit>
+        <reference name="content">
+            <block type="itanium_referral/adminhtml_referral_customer_edit" name="referral.customer.edit.container"/>
+        </reference>
+    </adminhtml_referral_customer_edit>
+</layout>

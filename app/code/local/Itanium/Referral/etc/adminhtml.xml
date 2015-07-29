@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <menu>
+        <itaniumextensions translate="title" module="itanium_referral">
+            <title>Itanium Extensions</title>
+            <sort_order>30</sort_order>
+            <children>
+                <itanium_menu translate="title" module="itanium_referral">
+                    <title>Itanium Customer Referral</title>
+                    <sort_order>10</sort_order>
+                    <depends>
+                        <module>Itanium_Referral</module>
+                        <config>itanium_referral/general/is_enabled</config>
+                    </depends>
+                    <children>
+
+                        <rate translate="title" module="itanium_referral">
+                            <title>Referral Rates</title>
+                            <action>adminhtml/referral_rate/</action>
+                            <sort_order>10</sort_order>
+                        </rate>
+                        <overview translate="title" module="itanium_referral">
+                            <title>Referral Overview</title>
+                            <action>adminhtml/referral_overview/</action>
+                            <sort_order>20</sort_order>
+                        </overview>
+                        <customers translate="title" module="itanium_referral">
+                            <title>Referral Customers</title>
+                            <action>adminhtml/referral_customer/</action>
+                            <sort_order>20</sort_order>
+                        </customers>
+                    </children>
+                </itanium_menu>
+            </children>
+        </itaniumextensions>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <itaniumextensions translate="title" module="cms">
+                        <title>Itanium</title>
+                        <sort_order>30</sort_order>
+                        <children>
+                            <itanium_menu translate="title" module="itanium_referral">
+                                <title>Itanium Customer Referral (Menu)</title>
+                                <sort_order>15</sort_order>
+                            </itanium_menu>
+                        </children>
+                    </itaniumextensions>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <itanium_referral translate="title" module="itanium_referral">
+                                        <title>Itanium Customer Referral Configuration</title>
+                                    </itanium_referral>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <customer_account>
+        <!-- Itanium_Refferal -->
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="itanium_referral" ifconfig="itanium_referral/general/is_enabled">
+                <name>Customer Referral</name>
+                <path>itanium_referral/customer/info/</path>
+                <label>Customer Referral</label>
+            </action>
+        </reference>
+    </customer_account>
+
+    <itanium_referral_customer_info>
+        <update handle="customer_account"/>
+        <reference name="my.account.wrapper">
+            <block type="itanium_referral/customer_reward" name="customer.reward" template="itanium/referral/customer/reward.phtml">
+                <block type="itanium_referral/customer_reward_info" name="customer.referral.info" template="itanium/referral/customer/reward/info.phtml"/>
+                <block type="itanium_referral/customer_reward_history" name="customer.referral.history" template="itanium/referral/customer/reward/history.phtml"/>
+                <block type="itanium_referral/customer_reward_subscription" name="customer.referral.subscription" template="itanium/referral/customer/reward/subscription.phtml"/>
+            </block>
+        </reference>
+    </itanium_referral_customer_info>
+</layout>
