@@ -4,7 +4,6 @@
  *
  * @category    Itanium
  * @package     Itanium_Referral
- * @author      Magento Core Team <core@magentocommerce.com>
  */
 class Itanium_Referral_Block_Customer_Reward extends Mage_Core_Block_Template
 {

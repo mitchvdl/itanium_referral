@@ -5,7 +5,6 @@
  *
  * @category    Itanium
  * @package     Itanium_Referral
- * @author      Magento Core Team <core@magentocommerce.com>
  */
 class Itanium_Referral_Model_Resource_Reward_Rate extends Mage_Core_Model_Resource_Db_Abstract
 {

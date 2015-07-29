@@ -4,7 +4,6 @@
  *
  * @category    Itanium
  * @package     Itanium_Referral
- * @author      Magento Core Team <core@magentocommerce.com>
  */
 class Itanium_Referral_Model_Action_Admin extends Itanium_Referral_Model_Action_Abstract
 {
